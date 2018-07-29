@@ -19,7 +19,7 @@ void ACControl::begin(uint8_t sp, uint8_t gp) {     // sp = sync pin; gp = gate 
   pinMode(gatePin, OUTPUT);
 
   // Set up Timer1.
-  TIMSK1 = 0x06;                                    // Enable comparator A and overflow interrupts.
+  TIMSK1 = 0x06;                                    // Enable comparator A and comparator B interrupts.
   TCCR1A = 0x00;                                    // Timer control registers set for
   TCCR1B = 0x00;                                    // normal operation, timer disabled.
 
@@ -36,7 +36,7 @@ void ACControl::begin(uint8_t sp, uint8_t gp) {     // sp = sync pin; gp = gate 
 // switching very close to the zero crossing.
 // 
 // TODO: calculate switch time based on actual requested power level.
-// TODO: do the above only if a new power level is given for better peformance..
+// TODO: do the above only if a new power level is given for better performance..
 void ACControl::setPower(float power) {
   if (power < 3) {                                  // <3% power: switch off completely.
     off();
@@ -47,6 +47,11 @@ void ACControl::setPower(float power) {
   else {
     pulseDelay = (uint16_t)(100 - power) * 25;      // 25 pulses = 1% of power (10,000 us / 4 us/tick / 100% = 25)
     switchState = NORMAL;
+    
+    if ((int)power % 10 == 0) {
+      Serial.print(pulseDelay);
+      Serial.print(", ");
+    }
   }
 }
 
@@ -67,7 +72,7 @@ ISR (PCINT2_vect) {                                 // Peak detection pin - must
 
 void ACControl::PCINT2_ISR() {
   if (switchState == NORMAL ||
-      switchState == SWITCH_ON) {                   // Make sure we're in full on or full off mode.
+      switchState == SWITCH_ON) {                   // Make sure we're not in full on or full off mode.
     if (digitalRead(syncPin) == LOW) {              // Falling edge detected.
       OCR1A = TCNT1 + ZC_DELAY;                     // Set the comparator A to ZC_DELAY from the current reading of the counter.
       TCCR1B = 0x03;                                // Start timer with divide by 64 input = 4 us per tick at 16 MHz.
@@ -81,7 +86,7 @@ ISR(TIMER1_COMPA_vect) {                            // Comparator A match: zero 
 }
 
 void ACControl::OCR1A_ISR() {
-  if (switchState = SWITCH_ON) {                    // Switch on at zero crossing.
+  if (switchState == SWITCH_ON) {                    // Switch on at zero crossing.
     digitalWrite(gatePin, HIGH);                    // Switch on the TRIAC constantly.
     switchState = ON;                               // Record that we're now switched on.
     TCCR1B = 0x00;                                  // Disable timer; we just want to keep it on.

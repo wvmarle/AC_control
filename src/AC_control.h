@@ -4,7 +4,7 @@
 #include <Arduino.h>
 
 
-const uint16_t ZC_DELAY = 940;                      // 4 us per clock tick; 4100 us delay between sync signal and zero crossing.
+const uint16_t ZC_DELAY = 960;                      // 4 us per clock tick; 4100 us delay between sync signal and zero crossing.
 const byte PULSE = 12;                              // Trigger pulse width (counts) - 48 us.
 const uint16_t MAX_PULSE_DELAY = 2460 - PULSE;      // 160 us before the next expected ZC the TRIAC pulse must be finished.
 enum switchStates {                                 // Various states the switching can be in:
