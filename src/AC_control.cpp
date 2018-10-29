@@ -1,11 +1,5 @@
 #include "AC_control.h"
 
-// ZC_DELAY: when the zero crossing happens; 940 ticks (3760 us) past the pulse gives full power to the motor (detemined experimentally).
-// MAX_PULSE_DELAY: last moment the TRIAC may be fired; any later than this and the next cycle may be triggered so
-//                  that gives 100% instead of 0% power.
-// A ~150 us margin is needed due to inaccuracy from the peak detection - this is 1.5%.
-
-
 ACControl::ACControl() {
   switchState = OFF;
 }
@@ -35,8 +29,6 @@ void ACControl::begin(uint8_t sp, uint8_t gp) {     // sp = sync pin; gp = gate 
 // Power >97% is switched fully on; power <3% is switched fully off. This to prevent glitches as we're 
 // switching very close to the zero crossing.
 // 
-// TODO: calculate switch time based on actual requested power level.
-// TODO: do the above only if a new power level is given for better performance..
 void ACControl::setPower(float power) {
   if (power < 3) {                                  // <3% power: switch off completely.
     off();
@@ -45,13 +37,14 @@ void ACControl::setPower(float power) {
     on();
   }
   else {
+#ifdef F50HZ
     pulseDelay = (uint16_t)(100 - power) * 25;      // 25 pulses = 1% of power (10,000 us / 4 us/tick / 100% = 25)
+#endif
+
+#ifdef F60HZ
+    pulseDelay = (uint16_t)(100 - power) * 20.83;   // 20.83 pulses = 1% of power (8,333 us / 4 us/tick / 100% = 20.83)
+#endif
     switchState = NORMAL;
-    
-    if ((int)power % 10 == 0) {
-      Serial.print(pulseDelay);
-      Serial.print(", ");
-    }
   }
 }
 
