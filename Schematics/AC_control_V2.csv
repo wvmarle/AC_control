@@ -1,0 +1,17 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"D1";"TO-220-3_Vertical";1;"BT136-600E";;;
+2;"R2";"R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal";1;"2k2";;;
+3;"R3";"R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal";1;"470R";;;
+4;"R4";"R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal";1;"220R";;;
+5;"U2";"DIP-6_W7.62mm";1;"MOC3010M";;;
+6;"R5";"R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal";1;"47R";;;
+7;"REF**";"Symbol_HighVoltage_Type2_CopperTop_VerySmall";1;"Symbol_HighVoltage_Type2_CopperTop_VerySmall";;;
+8;"J1";"TerminalBlock_KF129_P5.08mm";1;"AC in";;;
+9;"J2";"TerminalBlock_KF129_P5.08mm";1;"AC out";;;
+10;"C2";"C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3";1;"0.15µF";;;
+11;"F1";"PTF-78_fuseholder";1;"4A slow";;;
+12;"C1";"C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3";1;"47nF";;;
+13;"REF**";"Heatsink_YBxx";1;"Heatsink";;;
+14;"U1";"DIP-6_W7.62mm";1;"H11AA1";;;
+15;"J3";"JST_XH_B03B-XH-A_03x2.50mm_Straight";1;"Conn_01x03";;;
+16;"REF***";"OSHW-Logo_7.5x8mm_SilkScreen";1;"OSHW-Logo_7.5x8mm_SilkScreen";;;

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name images)(type KiCad)(uri /home/wouter/Arduino/KiCad/libraries/images)(options "")(descr ""))
+)

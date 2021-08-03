@@ -1,0 +1,139 @@
+Cmp-Mod V01 Created by PcbNew   date = Wed Jun 27 18:47:58 2018
+
+BeginCmp
+TimeStamp = 5B1579BD
+Path = /5B156AF7
+Reference = D1;
+ValeurCmp = BT136;
+IdModule  = TO_SOT_Packages_THT:TO-220-3_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579CF
+Path = /5B1565BA
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579D5
+Path = /5B156431
+Reference = R2;
+ValeurCmp = 2k2;
+IdModule  = Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579DB
+Path = /5B1572F3
+Reference = R3;
+ValeurCmp = 470R;
+IdModule  = Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579E1
+Path = /5B157021
+Reference = R4;
+ValeurCmp = 220R;
+IdModule  = Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579E9
+Path = /5B1564FE
+Reference = U1;
+ValeurCmp = H11AA1;
+IdModule  = Housings_DIP:DIP-4_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1579F3
+Path = /5B156E6B
+Reference = U2;
+ValeurCmp = MOC3010M;
+IdModule  = Housings_DIP:DIP-6_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B157A90
+Path = /5B1580BF
+Reference = J3;
+ValeurCmp = Conn_01x04;
+IdModule  = Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B1946DB
+Path = /5B196E96
+Reference = R5;
+ValeurCmp = 47R;
+IdModule  = Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B212223
+Path = 
+Reference = REF**;
+ValeurCmp = Symbol_HighVoltage_Type2_CopperTop_VerySmall;
+IdModule  = images:Symbol_HighVoltage_Type2_CopperTop_VerySmall;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B267414
+Path = 
+Reference = REF***;
+ValeurCmp = OSHW-Logo_5.7x6mm_SilkScreen;
+IdModule  = Symbols:OSHW-Logo_5.7x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B266525
+Path = /5B197455
+Reference = F1;
+ValeurCmp = 4A slow;
+IdModule  = HydroMonitor:PTF-78_fuseholder;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B28C551
+Path = /5B1561FF
+Reference = J1;
+ValeurCmp = AC in;
+IdModule  = HydroMonitor:TerminalBlock_KF129_P5.08mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B28C556
+Path = /5B15623F
+Reference = J2;
+ValeurCmp = AC out;
+IdModule  = HydroMonitor:TerminalBlock_KF129_P5.08mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B336A4E
+Path = /5B156485
+Reference = C1;
+ValeurCmp = 47nF;
+IdModule  = Capacitors_THT:C_Rect_L18.0mm_W5.0mm_P15.00mm_FKS3_FKP3;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B336A53
+Path = /5B196E9C
+Reference = C2;
+ValeurCmp = 0.15µF;
+IdModule  = Capacitors_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3;
+EndCmp
+
+BeginCmp
+TimeStamp = 5B266F6B
+Path = 
+Reference = REF**;
+ValeurCmp = Heatsink;
+IdModule  = HydroMonitor:Heatsink_YBxx;
+EndCmp
+
+EndListe

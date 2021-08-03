@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name AC_control-rescue)(type Legacy)(uri ${KIPRJMOD}/AC_control-rescue.lib)(options "")(descr ""))
+  (lib (name arduino)(type Legacy)(uri /home/wouter/Arduino/KiCad/libraries/arduino.lib)(options "")(descr ""))
+)
