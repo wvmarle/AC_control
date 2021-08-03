@@ -18,4 +18,6 @@ Schematics
 
 In the ./schematics folder are the complete schematics and PCB development files. 
 
-The V1 PCB has been tested and was found to have some issues: the TRIAC was connected incorrectly, and an optocoupler footprint was wrong. These issues have been corrected in the development version in the root directory, but have not been tested as of yet.
+The V1 PCB has been tested and was found to have some issues: the TRIAC was connected incorrectly, and an optocoupler footprint was wrong. These issues have been corrected in the development version in the root directory.
+
+The schematic has been tested by reworking bits of the V1 PCB, but the redesigned PCB has not been tested as such.
