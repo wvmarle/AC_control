@@ -13,3 +13,9 @@ It is currently limited to 50 Hz AC (this is a code limitation).
 
 Phase cutting is an AC control technique using a TRIAC to control how much of the waveform is let through to the device. The later in the wave the TRIAC is switched on, the less power is transferred to the connected device.
 
+Schematics
+-
+
+In the ./schematics folder are the complete schematics and PCB development files. 
+
+The V1 PCB has been tested and was found to have some issues: the TRIAC was connected incorrectly, and an optocoupler footprint was wrong. These issues have been corrected in the development version in the root directory, but have not been tested as of yet.
